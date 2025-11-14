@@ -1,18 +1,18 @@
 ---
-# 🔁 Python Control Flow: Conditional Statements
+# 🔁 Python Control Flow: Conditional Statements & Loops
 
-Control flow allows your program to make decisions and execute code based on conditions. Python uses `if`, `elif`, and `else` statements to control the flow of execution.
+Control flow allows your program to make decisions and repeat actions based on conditions. Python provides powerful tools like `if`, `elif`, `else`, `for`, and `while` to manage how your code executes.
 ---
 
-## 🧠 Syntax Overview
+## 🧠 Conditional Statements
+
+### Syntax Overview
 
 - **`if`**: Executes a block of code if the condition is `True`.
 - **`elif`**: (short for "else if") Adds additional conditions after the initial `if`.
 - **`else`**: Executes a block of code if none of the previous conditions are `True`.
 
----
-
-## ✅ Example: Checking a Condition
+### ✅ Example: Checking a Condition
 
 ```python
 num = 15
@@ -25,33 +25,93 @@ else:
     print("Negative Number")
 ```
 
-### 🔍 Output:
+#### 🔍 Output:
 
 ```
 Positive Number
 ```
 
----
+### 🧪 Additional Tips
 
-## 🧪 Additional Tips
-
-- Conditions use comparison operators like `>`, `<`, `==`, `!=`, `>=`, `<=`.
-- You can combine conditions using logical operators: `and`, `or`, `not`.
-- Indentation is critical in Python—blocks under `if`, `elif`, and `else` must be indented consistently.
+- Use comparison operators: `>`, `<`, `==`, `!=`, `>=`, `<=`
+- Combine conditions with logical operators: `and`, `or`, `not`
+- Indentation matters! Python uses indentation to define code blocks.
 
 ---
 
-## 🧩 Example: Multiple Conditions
+## 🔄 Loops in Python
 
-```python
-temperature = 75
+Loops allow you to repeat actions efficiently.
 
-if temperature > 85:
-    print("It's hot outside.")
-elif temperature > 65:
-    print("It's warm outside.")
-else:
-    print("It's cool outside.")
-```
+### 🔁 Types of Loops
+
+#### **`for` Loop**
+
+- Iterates over a sequence (like a list, tuple, string, or range).
+- Example:
+  ```python
+  for fruit in ["apple", "banana", "cherry"]:
+      print(fruit)
+  ```
+
+#### **`while` Loop**
+
+- Repeats as long as a condition is `True`.
+- Example:
+  ```python
+  count = 0
+  while count < 3:
+      print("Counting:", count)
+      count += 1
+  ```
 
 ---
+
+## 🧩 Looping Over Different Objects
+
+- **Strings**:
+  ```python
+  for char in "hello":
+      print(char)
+  ```
+- **Lists**:
+  ```python
+  for item in [1, 2, 3]:
+      print(item)
+  ```
+- **Tuples**:
+  ```python
+  for pair in [(1, 2), (3, 4)]:
+      print(pair)
+  ```
+- **Range**:
+  ```python
+  for i in range(5):
+      print(i)
+  ```
+
+---
+
+## 🛑 Controlling Loop Execution
+
+### `break`
+
+- Terminates the loop when a condition is met.
+- Example:
+  ```python
+  for i in range(10):
+      if i == 5:
+          break
+      print(i)
+  ```
+
+### `continue`
+
+- Skips the current iteration and moves to the next.
+- Example:
+  ```python
+  for i in range(5):
+      if i == 2:
+          continue
+      print(i)
+  ```
